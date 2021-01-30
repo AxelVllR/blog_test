@@ -1,0 +1,27 @@
+{
+  "/": {
+    "class": "\\App\\Controller\\LandingController",
+    "method": "index"
+  },
+  "/blog": {
+    "class": "\\App\\Controller\\BlogController",
+    "method": "show",
+    "sub_routes": {
+      "name": "/post-{id}",
+      "regex": "post-\\d+",
+      "method": "showPost"
+    }
+  },
+  "/contact": {
+    "class": "\\App\\Controller\\ContactController",
+    "method": "show"
+  },
+  "/contact/send": {
+    "class": "\\App\\Controller\\ContactController",
+    "method": "send"
+  },
+  "/login": {
+    "class": "\\App\\Controller\\AuthController",
+    "method": "login"
+  }
+}
